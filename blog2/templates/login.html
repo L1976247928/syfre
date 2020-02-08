@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+</head>
+<body>
+
+<div>
+    <a style="text-align:center;">欢迎登陆BigFat</a>
+    <form action="/login/" method="post">
+        {% csrf_token %}
+        <ul><li><input type="text" name="nickname" required="required" placeholder="昵称"></li></ul>
+        <ul><li><input name="password" type="password" required="required" placeholder="密码"></li></ul>
+        <ul><li><input type="submit" value="登陆">{{message}}</li></ul>
+        <ul><li><a href="/forget">忘记密码&nbsp</a><a href="/update">&nbsp修改密码</a><a href="/register/">&nbsp注册</a></li></ul>
+    </form>
+</div>
+
+
+
+
+
+</body>
+</html>

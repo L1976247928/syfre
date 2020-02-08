@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/comment.css' %}">
+{% block text %}
+{% for post in post_obj %}
+
+<div style="float:left;">title:{{ post.posttitle }}</div>
+<br>
+{{ post.comment }}
+<br>
+<div style="float:right;">By:{{ post.postAuthor }}</div>
+{% endfor %}
+
+
+
+<div id="condiv" style="height:100px;">
+
+<ul id="remark">
+    <br>
+    <br>
+    <p style="font-size:30px;">评论</p>
+{% for rem in remark %}
+    <br>
+    <li>{{ rem.owner }}:</li>
+        <li><p>
+        &nbsp&nbsp{{ rem.content }}
+        </p></li>
+{% endfor %}
+</ul>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+

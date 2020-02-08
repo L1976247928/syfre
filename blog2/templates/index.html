@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block text %}
+
+
+{% for post in post_obj %}
+    <li>
+		<div style="float:left">title:{{ post.posttitle }}</div><br>
+    	<a href="/clear/{{ post.id }}"><p id="p1">
+				{{ post.comment }}
+		</p></a>
+		<div style="float:right">By:{{ post.postAuthor }}&nbsp&nbsp&nbsp</div><br>
+    </li>
+	<br><br>
+{% endfor %}
+
+
+{% endblock %}

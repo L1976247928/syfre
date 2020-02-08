@@ -1,0 +1,15 @@
+ul{
+          list-style:none;
+}
+
+div{
+          background-color:#DCDCDC;
+          width:250px;
+          height:230px;
+          position:fixed;
+          left:0px;
+          right:0px;
+          top:0px;
+          bottom:0px;
+          margin:auto;
+}
